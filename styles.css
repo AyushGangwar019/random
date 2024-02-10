@@ -1,0 +1,84 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins, sans-serif; /* Corrected font-family name */
+    background-image: url(background1.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0; /* Resetting default body margin */
+}
+
+.wrapper, .single-card {
+    height: 450px;
+    width: 300px; /* Added fixed width for better layout */
+    margin: auto;
+    position: relative;
+    transform-style: preserve-3d;
+  transition: transform 2s ease; /*Moved transition to `.single-card` */
+}
+
+.wrapper {
+    perspective: 900px; /* Adjusted perspective value */
+}
+
+.single-card:hover, .single-card:active {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 20px; /* Reduced border-radius for a smoother look */
+    box-shadow: 5px 5px 100px black;
+
+}
+
+.front {
+    cursor: pointer;
+    background-image: url('teddy1.jpg');
+    /* background-image: url('hi-i-love-you.gif'); */
+    background-size: cover;
+    background-position: center;
+}
+
+.back {
+    transform: rotateY(180deg);
+    text-align: center;
+    background-image: linear-gradient(to top, rgb(116, 217, 243), rgb(244, 191, 238)7, 0, 255);
+}
+
+.content {
+    padding-top: 25%;
+}
+
+.content h2 {
+    font-size: 35px;
+    margin: 0;
+    font-weight: 300;
+    text-align: center;
+    color: rgb(36, 3, 3);
+  text-shadow: 5px 5px 10px black;
+}
+.wish{
+    font-size: 25px;
+    text-align: center;
+    color: rgb(36, 3, 3);
+    text-shadow: 5px 5px 10px black;
+}
+
+.socials {
+    margin-top: 50px; /* Reduced margin for better alignment */
+    text-align: center; /* Center aligning social icons */
+}
+
+.socials img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
